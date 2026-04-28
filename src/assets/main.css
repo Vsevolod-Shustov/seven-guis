@@ -1,0 +1,46 @@
+@import './base.css';
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  font-weight: normal;
+}
+
+:root {
+  --content-height-desktop: calc(100vh - 3.5rem);
+  --content-height-mobile: 100vh;
+}
+
+.page {
+  padding: 1rem;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+@media (hover: hover) {
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 1023px) {
+  .page {
+    min-height: var(--content-height-mobile);
+  }
+}
+
+@media (min-width: 1024px) {
+  .page {
+    min-height: var(--content-height-desktop);
+  }
+  /* #app {
+    display: grid;
+    grid-template-areas:
+      'header header header header'
+      'main main main aside';
+  } */
+}
