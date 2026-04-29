@@ -7,9 +7,9 @@ import Nav from '@/components/Nav.vue'
   <div class="page">
     <h1>Counters</h1>
     <Nav>
-      <RouterLink to="/basic">Basic</RouterLink>
-      <RouterLink to="/component">Component</RouterLink>
-      <RouterLink to="/pinia">Pinia</RouterLink>
+      <RouterLink to="/counter/basic">Basic</RouterLink>
+      <RouterLink to="/counter/component">Component</RouterLink>
+      <RouterLink to="/counter/pinia">Pinia</RouterLink>
     </Nav>
     <RouterView></RouterView>
   </div>

@@ -11,27 +11,37 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView,
+      meta: { transition: 'slide' },
     },
     {
       path: '/counter',
       name: 'counter',
       component: () => import('../views/CounterView.vue'),
+      meta: { transition: 'slide' },
       children: [
         {
           path: 'basic',
-          component: CounterBasicView,
+          component: () => import('../views/counter/CounterBasicView.vue'),
         },
         {
           path: 'component',
-          component: CounterComponentView,
+          component: () => import('../views/counter/CounterComponentView.vue'),
         },
         {
           path: 'pinia',
-          component: CounterPiniaView,
+          component: () => import('../views/counter/CounterPiniaView.vue'),
         },
       ],
     },
   ],
 })
 
+import { ref } from 'vue'
+
+router.beforeEach((to, from) => {
+  lastRoutePath.value = from.path
+  return true
+})
+
 export default router
+export const lastRoutePath = ref<string>('')

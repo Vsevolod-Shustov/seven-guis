@@ -10,11 +10,11 @@
   text-align: center;
 }
 
-.nav :slotted(a.router-link-exact-active) {
+.nav :slotted(a.router-link-active) {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.nav :slotted(a.router-link-exact-active:hover) {
+.nav :slotted(a.router-link-active:hover) {
   background-color: rgba(0, 0, 0, 0.1);
   text-decoration: none;
   cursor: not-allowed;

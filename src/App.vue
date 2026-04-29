@@ -1,6 +1,28 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView, useRoute } from 'vue-router'
 import Nav from './components/Nav.vue'
+import { computed } from 'vue'
+import { lastRoutePath } from './router'
+
+const route = useRoute()
+
+const transitionName = computed<string | undefined>(() => {
+  const from = lastRoutePath.value
+  const to = route.path
+  const fromCondition = from.search('counter/') != -1
+  const toCondition = to.search('counter') != -1
+  console.log('from: ' + from)
+  console.log('fromCondition: ' + fromCondition)
+  console.log('to: ' + to)
+  console.log('toCondition: ' + toCondition)
+  console.log('-----')
+  if (fromCondition && toCondition) {
+    return undefined
+  }
+
+  const t = route.matched.every((r) => r.meta?.transition) ? route.meta?.transition : ''
+  return typeof t === 'string' ? t : undefined
+})
 </script>
 
 <template>
@@ -16,7 +38,7 @@ import Nav from './components/Nav.vue'
     <main>
       <div class="slide-wrapper">
         <router-view v-slot="{ Component, route }">
-          <transition name="slide">
+          <transition :name="transitionName">
             <component :is="Component" :key="route.path" />
           </transition>
         </router-view>
