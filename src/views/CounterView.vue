@@ -1,15 +1,16 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
+import Nav from '@/components/Nav.vue'
 </script>
 
 <template>
   <div class="page">
     <h1>Counters</h1>
-    <nav>
+    <Nav>
       <RouterLink to="/basic">Basic</RouterLink>
       <RouterLink to="/component">Component</RouterLink>
       <RouterLink to="/pinia">Pinia</RouterLink>
-    </nav>
+    </Nav>
     <RouterView></RouterView>
   </div>
 </template>

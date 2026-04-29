@@ -1,14 +1,15 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+import Nav from './components/Nav.vue'
 </script>
 
 <template>
   <header>
     <div class="wrapper">
-      <nav>
+      <Nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/counter">Counter</RouterLink>
-      </nav>
+      </Nav>
     </div>
   </header>
   <div class="content">
@@ -30,30 +31,6 @@ header {
   line-height: 1.5rem;
   background-color: rgba(0, 255, 0, 0.1);
   grid-area: header;
-}
-
-nav {
-  width: 100%;
-  text-align: center;
-}
-
-nav a.router-link-exact-active {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-  text-decoration: none;
-  cursor: not-allowed;
-}
-
-nav a {
-  display: inline-block;
-  padding: 1rem;
-}
-
-nav a:first-of-type {
-  border: 0;
 }
 
 main {
@@ -109,15 +86,6 @@ aside {
     display: flex;
     place-items: flex-start;
     flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    font-size: 1rem;
-  }
-
-  nav a {
-    border-inline-start: 1px solid var(--color-border);
   }
 
   .slide-wrapper {
