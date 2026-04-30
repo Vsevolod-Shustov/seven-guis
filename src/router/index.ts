@@ -21,14 +21,17 @@ const router = createRouter({
       children: [
         {
           path: 'basic',
+          name: 'counter-basic',
           component: () => import('../views/counter/CounterBasicView.vue'),
         },
         {
           path: 'component',
+          name: 'counter-component',
           component: () => import('../views/counter/CounterComponentView.vue'),
         },
         {
           path: 'pinia',
+          name: 'counter-pinia',
           component: () => import('../views/counter/CounterPiniaView.vue'),
         },
       ],

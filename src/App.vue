@@ -9,7 +9,7 @@ const route = useRoute()
 const transitionName = computed<string | undefined>(() => {
   const from = lastRoutePath.value
   const to = route.path
-  const fromCondition = from.search('counter/') != -1
+  const fromCondition = from.search('counter') != -1
   const toCondition = to.search('counter') != -1
   console.log('from: ' + from)
   console.log('fromCondition: ' + fromCondition)
@@ -17,7 +17,7 @@ const transitionName = computed<string | undefined>(() => {
   console.log('toCondition: ' + toCondition)
   console.log('-----')
   if (fromCondition && toCondition) {
-    return undefined
+    return 'fakeTransition'
   }
 
   const t = route.matched.every((r) => r.meta?.transition) ? route.meta?.transition : ''
@@ -112,6 +112,10 @@ aside {
 
   .slide-wrapper {
     min-height: var(--content-height-desktop);
+  }
+  .slide-wrapper:has(div.fakeTransition-enter-active),
+  .slide-wrapper:has(div.fakeTransition-leave-active) {
+    height: var(--content-height-desktop);
   }
 
   .content {

@@ -1,5 +1,5 @@
 <script setup lang="ts"></script>
 
-<template>counter with components</template>
+<template><div>counter with components</div></template>
 
 <style></style>

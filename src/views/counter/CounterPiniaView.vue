@@ -1,5 +1,5 @@
 <script setup lang="ts"></script>
 
-<template>counter with pinia</template>
+<template><div>counter with pinia</div></template>
 
 <style></style>
