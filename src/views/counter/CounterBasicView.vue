@@ -1,5 +1,16 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref } from 'vue'
 
-<template><div>counter with components</div></template>
+const count = ref(0)
+
+const handleClick = function () {
+  count.value++
+}
+</script>
+
+<template>
+  <p>{{ count }}</p>
+  <button @click="handleClick">increase</button>
+</template>
 
 <style></style>
