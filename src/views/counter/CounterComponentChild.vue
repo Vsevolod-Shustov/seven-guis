@@ -8,5 +8,5 @@ defineEmits(['handleClick'])
 
 <template>
   <p>{{ count }}</p>
-  <button @click="$emit('handleClick')">Click Me</button>
+  <button @click="$emit('handleClick')">increment</button>
 </template>

@@ -16,7 +16,7 @@ const handleClick = function () {
 
 <template>
   <p>{{ count }}</p>
-  <button @click="handleClick">increase</button>
+  <button @click="handleClick">increment</button>
 </template>
 
 <style></style>
