@@ -19,4 +19,7 @@ import Nav from '@/components/Nav.vue'
 .page {
   background-color: rgba(0, 0, 255, 0.1);
 }
+Nav {
+  margin-bottom: 1rem;
+}
 </style>
