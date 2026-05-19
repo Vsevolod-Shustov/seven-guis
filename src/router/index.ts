@@ -36,6 +36,12 @@ const router = createRouter({
         },
       ],
     },
+    {
+      path: '/temperature-converter',
+      name: 'temperature-converter',
+      component: () => import('../views/TemperatureConverterView.vue'),
+      meta: { transition: 'slide' },
+    },
   ],
 })
 
