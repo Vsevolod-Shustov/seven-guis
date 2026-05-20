@@ -42,6 +42,12 @@ const router = createRouter({
       component: () => import('../views/TemperatureConverterView.vue'),
       meta: { transition: 'slide' },
     },
+    {
+      path: '/flight-booker',
+      name: 'flight-booker',
+      component: () => import('../views/FlightBookerView.vue'),
+      meta: { transition: 'slide' },
+    },
   ],
 })
 
