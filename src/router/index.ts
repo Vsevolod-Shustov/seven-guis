@@ -48,6 +48,12 @@ const router = createRouter({
       component: () => import('../views/FlightBookerView.vue'),
       meta: { transition: 'slide' },
     },
+    {
+      path: '/timer',
+      name: 'timer',
+      component: () => import('../views/TimerView.vue'),
+      meta: { transition: 'slide' },
+    },
   ],
 })
 
