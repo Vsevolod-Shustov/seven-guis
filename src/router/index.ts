@@ -54,6 +54,12 @@ const router = createRouter({
       component: () => import('../views/TimerView.vue'),
       meta: { transition: 'slide' },
     },
+    {
+      path: '/crud',
+      name: 'crud',
+      component: () => import('../views/CrudView.vue'),
+      meta: { transition: 'slide' },
+    },
   ],
 })
 

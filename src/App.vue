@@ -34,6 +34,7 @@ const transitionName = computed<string | undefined>(() => {
         <RouterLink to="/temperature-converter">Temperature Converter</RouterLink>
         <RouterLink to="/flight-booker">Flight Booker</RouterLink>
         <RouterLink to="/timer">Timer</RouterLink>
+        <RouterLink to="/crud">CRUD</RouterLink>
       </Nav>
     </div>
   </header>
