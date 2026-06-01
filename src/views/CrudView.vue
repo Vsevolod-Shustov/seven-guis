@@ -51,6 +51,7 @@ function addEmployee() {
 
 <template>
   <div class="page">
+    <h1>CRUD</h1>
     <form @submit.prevent="addEmployee" class="employee-form">
       <table>
         <tbody>

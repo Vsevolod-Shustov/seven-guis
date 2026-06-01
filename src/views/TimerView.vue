@@ -54,6 +54,7 @@ onUnmounted(() => {
 
 <template>
   <div class="page">
+    <h1>Timer</h1>
     <label>Elapsed Time: <progress :value="progressRate"></progress></label>
 
     <div>Elapsed Time: {{ (elapsed / 1000).toFixed(1) }}s</div>

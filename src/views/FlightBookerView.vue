@@ -49,6 +49,7 @@ function pad(n: number, s = String(n)) {
 
 <template>
   <div class="page">
+    <h1>Flight Booker</h1>
     <select v-model="flightType">
       <option value="one-way flight">One-way Flight</option>
       <option value="return flight">Return Flight</option>
