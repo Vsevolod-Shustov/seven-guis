@@ -55,7 +55,6 @@ const transitionName = computed<string | undefined>(() => {
 <style scoped>
 header {
   line-height: 1.5rem;
-  background-color: rgba(0, 255, 0, 0.1);
   grid-area: header;
 }
 
@@ -93,7 +92,6 @@ main {
 aside {
   grid-area: aside;
   padding: 1rem;
-  background-color: rgba(255, 255, 0, 0.1);
 }
 
 @media (max-width: 1023px) {

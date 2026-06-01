@@ -11,11 +11,11 @@
 }
 
 .nav :slotted(a.router-link-active) {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(128, 196, 255, 0.1);
 }
 
 .nav :slotted(a.router-link-active:hover) {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(128, 196, 255, 0.1);
   text-decoration: none;
   cursor: not-allowed;
 }

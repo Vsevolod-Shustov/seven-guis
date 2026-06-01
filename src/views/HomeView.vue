@@ -8,6 +8,5 @@
 
 <style scoped>
 .page {
-  background-color: rgba(255, 0, 0, 0.1);
 }
 </style>
